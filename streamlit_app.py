@@ -20,8 +20,8 @@ html_temp = """
   </div>
   """ 
 st.markdown(html_temp,unsafe_allow_html=True)
-model1= pickle.load(open(r"C:\Users\sairam\Downloads\stage-1.pkl", 'rb'))
-model2= pickle.load(open(r"C:\Users\sairam\Downloads\stage-2.pkl", 'rb'))
+model1= pickle.load(open(r"stage-1.pkl", 'rb'))
+model2= pickle.load(open(r"stage-2.pkl", 'rb'))
 x1=st.slider('Enter the value of start instant',0,4000,5)
 x2=st.slider('Enter the value of end instant',0,400,5)
 x3=st.slider('Enter the value of baseline value of expert',100,160,1)
