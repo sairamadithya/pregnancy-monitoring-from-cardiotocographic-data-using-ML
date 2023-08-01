@@ -46,7 +46,7 @@ x21=st.number_input('Enter the value of  mean',0,200)
 x22=st.number_input('Enter the value of  median',0,200)
 x23=st.number_input('Enter the value of  variance',0,200)
 x24=st.number_input('Enter the value of  tendency',0,300)
-inp=pd.DataFrame([[x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,x16,x17,x18,x19,x20,x21,x22,x23,x24]],columns=['b', 'e', 'lbe', 'lb', 'ac', 'fm', 'uc', 'astv', 'mstv', 'altv', 'mltv','dl','ds','dp','width','min','max','nmax','nzeros','mode','mean','median','variance','tendency'])
+inp=pd.DataFrame([[x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,x16,x17,x18,x19,x20,x21,x22,x23,x24]],columns=['B', 'E', 'LBE', 'LB', 'AC', 'FM', 'UC', 'ASTV', 'MSTV', 'ALTV', 'MLTV','DL','DS','DP','Width','Min','Max','Nmax','Nzeros','Mode','Mean','Median','Variance','Tendency'])
 if st.button('Basic diagnosis'):
     op=model1.predict(inp).astype(np.int16)
     if op==0:
