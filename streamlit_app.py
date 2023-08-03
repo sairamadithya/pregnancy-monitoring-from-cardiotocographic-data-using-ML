@@ -73,7 +73,6 @@ st.write()
 st.write()
 if st.button('Advanced diagnosis'):
         out=model2.predict(inm)
-        st.write(out)
         if out==0:
             st.markdown(""" 
   <div style="background-color: green;padding:3px;border: 3px solid;">
