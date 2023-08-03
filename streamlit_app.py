@@ -72,7 +72,7 @@ if st.button('Basic diagnosis'):
 st.write()
 st.write()
 if st.button('Advanced diagnosis'):
-        out=model2.predict(inm).astype(np.int16)
+        out=model2.predict(inm)
         st.write(out)
         if out==0:
             st.markdown(""" 
