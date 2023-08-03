@@ -22,6 +22,7 @@ html_temp = """
 st.markdown(html_temp,unsafe_allow_html=True)
 model1= pickle.load(open(r"stage-1.pkl", 'rb'))
 model2= pickle.load(open(r"stage-2.pkl", 'rb'))
+x1,buff, buff2 = st.beta_columns([1,3,1])
 x1=st.number_input('Enter the value of start instant',0,4000)
 x2=st.number_input('Enter the value of end instant',0,400)
 x3=st.number_input('Enter the value of baseline value of expert',0,160)
