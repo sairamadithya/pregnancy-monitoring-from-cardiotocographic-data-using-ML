@@ -48,6 +48,7 @@ x22=st.number_input('Enter the value of  median',0,200)
 x23=st.number_input('Enter the value of  variance',0,200)
 x24=st.number_input('Enter the value of  tendency',0,300)
 inp=pd.DataFrame([[x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,x16,x17,x18,x19,x20,x21,x22,x23,x24]],columns=['b', 'e', 'LBE', 'LB', 'AC', 'FM', 'UC', 'ASTV', 'MSTV', 'ALTV', 'MLTV','DL','DS','DP','Width','Min','Max','Nmax','Nzeros','Mode','Mean','Median','Variance','Tendency'])
+inm=inp.copy()
 if st.button('Basic diagnosis'):
     op=model1.predict(inp).astype(np.int16)
     if op==0:
@@ -69,8 +70,10 @@ if st.button('Basic diagnosis'):
   </div>
   """ ,unsafe_allow_html=True)
 st.write()
+st.write()
 if st.button('Advanced diagnosis'):
-        out=model2.predict(inp).astype(np.int16)
+        out=model2.predict(inm).astype(np.int16)
+        st.write(out)
         if out==0:
             st.markdown(""" 
   <div style="background-color: green;padding:3px;border: 3px solid;">
